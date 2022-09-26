@@ -1,0 +1,11 @@
+h2 {
+    text-align: center;
+}
+
+button {
+    float: left;
+}
+
+#subMsg {
+    min-height: 20px;
+}

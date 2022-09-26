@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="heading">
+        <h1>Your cart</h1>
+        <h2>Check out your items</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" [disabled]="books == null ||  books.length < 1"  (click)="checkout()">Checkout</button>
+            <button class="btn btn-danger" (click)="clearCart()">Clear cart</button>
+        </div>
+    </div>
+    <div class="row" *ngIf="books.length != 0">
+        <div class="col">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th>nm</th>
+                    <th>Cover</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Add</th>
+                    <th>Subtract</th>
+                    <th>Remove</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books; index as i">
+                    <td>{{ i+1 }} </td>
+                    <td><img src="{{ 'assets/images/'+book.image.url }}" width="80px" alt="{{ book.image.alt }}"></td>
+                    <td>{{ book.title +' by ' + book.author }}</td>
+                    <td>{{ book.quantity }}</td>
+                    <td><button class="btn btn-primary" (click)="incrementQuantity(book.id)">Add</button></td>
+                    <td><button class="btn btn-secondary" (click)="decrementQuantity(book.id)">Subtract</button></td>
+                    <td><button class="btn btn-danger"(click)="removeItemFromCart(book.id)">Remove</button></td>
+                    <td>{{ calculateDiscountedPrice(book.basePrice, book.discountPercent, book.quantity) }}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="row" *ngIf="books.length == 0">
+        <h3 class="info-text">{{ infoText }}</h3>
+    </div>
+</div>

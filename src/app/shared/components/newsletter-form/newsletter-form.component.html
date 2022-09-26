@@ -1,0 +1,21 @@
+<form action="" #nLSubForm="ngForm"  class="row"> 
+    <div class="row">
+        <h2>Subscribe to our newsletter</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>Receive updates on our latest releases and seasonal discounts by subscribing to our newsletter</p>
+        </div>
+        <div class="form-group col">
+                    <label for="nl-email" class="form-label">Email</label>
+                    <input type="text" name="nlEmail" id="nl-email" class="form-control" email required [(ngModel)]="nLemail.email" #email="ngModel">
+                    <span class="subMsg">{{ message }}</span>
+                <div>
+                    <button class="btn btn-primary" #submit [attr.aria-disabled]="submit.disabled ? true : false" [disabled]="isFieldValidPristineUntouched(email)" type="submit"
+                        (click)="onEmailSubmit()">Subscribe</button>
+                </div>
+        </div>
+        
+    </div>
+
+</form>

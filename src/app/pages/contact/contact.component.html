@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <h1>Contact</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2">
+        <div class="col-sm-5">
+            <h2>Information</h2>
+            <p>Library</p>
+            <p>11000 Belgrade</p>            
+            <p>Made up street</p>
+            <p>Email: library.library@mail.com</p>
+            <p>Open: 9am - 5pm</p>
+        </div>
+        <div class="col-sm-7">
+            <h2>Inquiries</h2>
+            <form action="" class="row g-4" [formGroup]="contactForm" (ngSubmit)="submitContact()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="name">First name</label>
+                        <input type="text" name="name" formControlName="firstName" id="name" class="form-control" required>
+                        <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)" class="error">
+                            <div *ngIf="firstName?.errors?.['required']">Name is required</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName">Last name</label>
+                        <input type="text" name="lastName" id="lastName" formControlName="lastName" class="form-control" required>
+                        <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)" class="error">
+                            <div *ngIf="lastName?.errors?.['required']">Last name is required</div>
+                        </div>
+                    </div>            
+                </div>
+                <div class="row">
+                    <div class="">
+                        <label for="lastName">Email</label>
+                        <input type="email" name="lastName" id="lastName" formControlName="email" class="form-control" required>
+                    </div>
+                    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+                        <div *ngIf="email?.errors?.['email'] && (email?.touched)|| email?.errors?.['required']">Valid email address is required</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="form-control" formControlName="message"></textarea>
+                        <div class="error" *ngIf="message?.invalid && (message?.touched || message?.dirty)">Can't submit empty message</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <button class="btn btn-dark" type="submit" [disabled]="contactForm.invalid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+li a {
+    text-decoration: none;
+    /* font-size: 1.2rem; */
+}
+
+.nav-link {
+    font-size: 1.2em;
+    
+}
+
+.nav-link:hover {
+    color: #fe6c9e !important;
+}
+
+.active-link {
+    color: #e9175e !important; 
+}
+
+.active-link:hover {
+    color: #fe6c9e !important;
+}

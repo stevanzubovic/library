@@ -1,0 +1,18 @@
+[
+    {
+        "id":0,
+        "name":"christmas",
+        "percent":"25"
+    },
+    {
+        "id":1,
+        "name":"New years",
+        "percent":"15"
+    },
+    {
+        "id":2,
+        "name":"rotating",
+        "percent":"10"
+    }
+    
+]

@@ -1,0 +1,37 @@
+<div class="container book-gallery">
+    <ng-template ngFor let-book [ngForOf]="books" let-i="index" let-even = "even">
+        <article class="book row g-0" [ngClass]="{'even-book': even}">
+            <div class="col-sm">
+                <img src="assets/images/{{ book.image.url }}" alt="{{ book.image.alt }}" class="book-cover-picture">
+            </div>
+            <div class="book-information col-lg-9 justify-content-between">
+                <div>
+                    <h3>{{ book.title }}</h3>
+                    <p class="author-text">{{ 'by ' + book.author }}</p>
+                    <p class="description">{{ book.description }}</p>
+                </div>
+
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <span class="col book-unavailable-tag" *ngIf="!book.available">Unavailable</span>
+                    </div>
+                    <div class="price col d-flex justify-content-end">
+                        <div class="row">
+                            <div [ngClass]="{'crossed': book.discountId || book.discountId == 0}" class="old-price-text" *ngIf="getDiscoutPercentById(book.discountId) > 0">
+                                {{ (book.discountPercent ?  book.basePrice : book.basePrice) | currency:'EUR' }}
+                            </div>
+                            <div class="price-text">{{ calculateDiscountedPrice(book.basePrice, getDiscoutPercentById(book.discountId)) | currency:'EUR' }}</div>    
+                        </div>
+                    </div>   
+                    <div class="col-lg-2 d-flex align-content-end">
+                        <!-- <button type="button" class="btn btn-primary" id="cart-btn" #cb (click)="addBookToCart(book.id)">Add to cart</button> -->
+                        <app-add-to-cart-button [bookId]="book.id"></app-add-to-cart-button>
+                    </div>   
+                </div>
+            </div>
+
+        </article>
+</ng-template>
+</div>
+
+

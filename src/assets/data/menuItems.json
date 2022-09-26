@@ -1,0 +1,27 @@
+[
+    {
+        "id":0,
+        "text":"main",
+        "link":"main"
+    },
+    {
+        "id":1,
+        "text":"about",
+        "link":"about"
+    },
+    {
+        "id":2,
+        "text":"contact",
+        "link":"contact"
+    },
+    {
+        "id":3,
+        "text":"cart",
+        "link":"cart"
+    },
+    {
+        "id":4,
+        "text":"author",
+        "link":"author"
+    }
+]

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="heading">
+        <h1>Library bookstore</h1>
+        <h2>Our most popular books</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="sort">Sort by price</label>
+            <select name="" id="sort" class="form-control" (change)="getFilteredlBooks()" [(ngModel)]="priceSortType" #sort>
+                <option value="default" [defaultSelected]="true"></option> 
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+            <!-- a -->
+            
+        </div>
+        <div class="col-sm-3">
+            <label for="sort-alphabetically">Sort alphabetically</label>
+            <select name="sort-alphabetically" id="sort-alphabetically" class="form-control" 
+            (change)="getAlphabeticallySortedBooks()" [(ngModel)]="alphabetSortType">
+                <option value="default" [defaultSelected]="true"></option>
+                <option value="az">A -> Z</option>
+                <option value="za">Z -> A</option>
+            </select>
+        </div>
+    </div>
+</div>
+<app-books-gallery [books]="books" [discounts]="discounts"></app-books-gallery>

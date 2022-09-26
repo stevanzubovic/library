@@ -1,0 +1,11 @@
+<article class="book d-flex" [ngClass]="{'even-book': index}">
+    <div class="col-4">
+        <img src="assets/images/{{book.image.url}}" alt="{{book.image.alt}}" class="book-cover-picture">
+    </div>
+    <div class="book-information">
+        <h3>{{book.title}}</h3>
+        <p>{{book.description}} </p>
+        <span *ngIf="book.available">Available</span>
+        <p>{{index}}</p>
+    </div>
+</article>

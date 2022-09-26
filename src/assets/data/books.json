@@ -1,0 +1,114 @@
+[
+    {
+        "id": 0,
+        "title": "The Great Gatsby",
+        "image": {
+            "url": "gatsbycover.jpg",
+            "alt": "Book cover"
+        },
+        "description": "The Great Gatsby, F. Scott Fitzgerald's third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted \"gin was the national drink and sex the national obsession\", it is an exquisitely crafted tale of America in the 1920s.\n The Great Gatsby is one of the great classics of twentieth-century literature.",
+        "dateLastRented": "23-07-2022",
+        "available": true,
+        "author": "F. Scott Fitzgerald",
+        "basePrice": 9.99,
+        "discountId":0
+    },
+    {
+        "id": 1,
+        "title": "The War of the Worlds",
+        "image": {
+            "url": "thewaroftheworldscover.jpg",
+            "alt": "war of the worlds cover"
+        },
+        "description": "When an army of invading Martians lands in England, panic and terror seize the population. As the aliens traverse the country in huge three-legged machines, incinerating all in their path with a heat ray and spreading noxious toxic gases, the people of the Earth must come to terms with the prospect of the end of human civilization and the beginning of Martian rule.\n Inspiring films, radio dramas, comic-book adaptations, television series and sequels,The War of the Worlds is a prototypical work of science fiction which has influenced every alien story that has come since, and is unsurpassed in its ability to thrill, well over a century since it was first published.",
+        "dateLastRented": "03-05-2022",
+        "available": true,
+        "author": "H.G. Wells",
+        "basePrice": 9.99,
+        "discountId":1
+    },
+    {
+        "id": 2,
+        "title": "Dracula",
+        "image": {
+            "url": "drakulacover.jpg",
+            "alt": "dracula cover"
+        },
+        "description": "Bram Stoker's novel became one of the masterpieces of the horror genre, brilliantly evoking a world of vampires and vampire hunters whilst simultaneously exposing the dark corners of Victorian sexuality and frustrated desire.",
+        "dateLastRented": "07-12-2022",
+        "available": true,
+        "author": " F. Scott Fitzgerald",
+        "basePrice": 9.99,
+        "discountId":1
+    },
+    {
+        "id": 3,
+        "title": "The black cat",
+        "image": {
+            "url": "theblackcatcover.jpg",
+            "alt": "the black cat cover"
+        },
+        "description": "One of Edgar Allan Poe's most memorable stories.\nThe tale centers on two matters, a black cat and the deterioration of a man. The man is one who enjoyed family life with his wife and numerous pets, but then he changed radically for the worse. The story is often compared to \"The Tell-Tale Heart\" because of the profound psychological elements these two works share. \"The Black Cat\" is a story you will never forget.\nLibrarian's note: this entry relates to the story \"The Black Cat.\" Collections and other short stories by the author can be found elsewhere on Goodreads.",
+        "dateLastRented": "08-08-2022",
+        "available": false,
+        "author": "Edgar Allan Poe",
+        "basePrice": 9.99,
+        "discountId":1
+    },
+    {
+        "id": 4,
+        "title": "Wuthering Heights",
+        "image": {
+            "url": "wutheringheightscover.jpg",
+            "alt": "Wuthering heights cover"
+        },
+        "description": "This best-selling Norton Critical Edition is based on the 1847 first edition of the novel. For the Fourth Edition, the editor has collated the 1847 text with several modern editions and has corrected a number of variants, including accidentals. The text is accompanied by entirely new explanatory annotations.\nNew to the fourth Edition are twelve of Emily Bronte's letters regarding the publication of the 1847 edition of Wuthering Heights as well as the evolution of the 1850 edition, prose and poetry selections by the author, four reviews of the novel, and poetry selections by the author, four reviews of the novel, and Edward Chitham's insightful and informative chronology of the creative process behind the beloved work.",
+        "dateLastRented": "",
+        "available": true,
+        "author": "Emily Brontë",
+        "basePrice": 5.99,
+        "discountId":1
+    },
+    {
+        "id": 7,
+        "title": "Moby-Dick or, the Whale",
+        "image": {
+            "url": "mobydickcover.jpg",
+            "alt": "Moby dick cover"
+        },
+        "description": "\"It is the horrible texture of a fabric that should be woven of ships' cables and hawsers. A Polar wind blows through it, and birds of prey hover over it.\"\nSo Melville wrote of his masterpiece, one of the greatest works of imagination in literary history. In part, Moby-Dick is the story of an eerily compelling madman pursuing an unholy war against a creature as vast and dangerous and unknowable as the sea itself. But more than just a novel of adventure, more than an encyclopaedia of whaling lore and legend, the book can be seen as part of its author's lifelong meditation on America. Written with wonderfully redemptive humour, Moby-Dick is also a profound inquiry into character, faith, and the nature of perception.\nThis edition of Moby-Dick, which reproduces the definitive text of the novel, includes invaluable explanatory notes, along with maps, illustrations, and a glossary of nautical terms.",
+        "dateLastRented": "",
+        "available": true,
+        "author": "Herman Melville",
+        "basePrice": 8.99,
+        "discountId":1
+    },
+    {
+        "id": 5,
+        "title": "The Count of Monte Cristo",
+        "image": {
+            "url": "montecristocover.jpg",
+            "alt": "Count of Monte Christo cover art"
+        },
+        "description": " Thrown in prison for a crime he has not committed, Edmond Dantes is confined to the grim fortress of If. There he learns of a great hoard of treasure hidden on the Isle of Monte Cristo and he becomes determined not only to escape, but also to unearth the treasure and use it to plot the destruction of the three men responsible for his incarceration. Dumas’ epic tale of suffering and retribution, inspired by a real-life case of wrongful imprisonment, was a huge popular success when it was first serialized in the 1840s.\nRobin Buss’s lively English translation is complete and unabridged, and remains faithful to the style of Dumas’s original. This edition includes an introduction, explanatory notes and suggestions for further reading. ",
+        "dateLastRented": "",
+        "available": true,
+        "author": "Alexandre Dumas",
+        "basePrice": 8.99
+ 
+    },
+    {
+        "id": 6,
+        "title": "The Picture of Dorian Gray",
+        "image": {
+            "url": "1857397.jpg",
+            "alt": "The picture of Dorian Gray cover art"
+        },
+        "description": "Oscar Wilde brings his enormous gifts for astute social observation and sparkling prose to The Picture of Dorian Gray, his dreamlike story of a young man who sells his soul for eternal youth and beauty. This dandy, who remains forever unchanged; petulant, hedonistic, vain, and amoral; while a painting of him ages and grows increasingly hideous with the years, has been horrifying, enchanting, obsessing, even corrupting readers for more than a hundred years.Taking the reader in and out of London drawing rooms, to the heights of aestheticism, and to the depths of decadence, The Picture of Dorian Gray is not only a melodrama about moral corruption. Laced with bon mots and vivid depictions of upper-class refinement, it is also a fascinating look at the milieu of Wilde’s fin-de-siècle world and a manifesto of the creed Art for Art’s Sake.” ",
+        "dateLastRented": "",
+        "available": true,
+        "author": "Alexandre Dumas",
+        "basePrice": 4.99,
+        "discountId":1
+    }
+]

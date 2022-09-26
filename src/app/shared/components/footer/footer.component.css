@@ -1,0 +1,30 @@
+* {
+    color: white;
+}
+
+footer {
+    padding-top: 25px;
+    margin-top: 3em;
+    align-items: center;
+}
+
+.footer-container {
+    width: 90%;
+}
+
+.quote {
+   
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.quote p {
+    font-size: 2em;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#quoteMaker {
+    font-size: 1.1em;
+    color: rgb(139, 134, 134);
+}

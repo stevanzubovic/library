@@ -1,0 +1,23 @@
+.book-cover-picture {
+    width: 200px;
+}
+
+.book-information {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.book-information h3 {
+    text-align: center;
+}
+
+p {
+    white-space: pre-line;
+}
+
+.book {
+    padding: 7px 0;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}

@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.error {
+    color: #e9175e !important;
+    font-size: 0.8em;
+}
+
+textarea {
+    resize: none;
+    width: 100;
+}
