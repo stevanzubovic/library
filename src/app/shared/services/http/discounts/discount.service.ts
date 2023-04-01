@@ -11,8 +11,13 @@ export class DiscountService {
   constructor(private http: HttpClient) { }
 
   private url = 'assets/data/discounts.json';
+  private serverPath = 'http://localhost/server/api/discount.php';
 
   getAllDiscounts(): Observable<IDiscount[]> {
     return this.http.get<IDiscount[]>(this.url);
+  }
+
+  getAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.serverPath);
   }
 }

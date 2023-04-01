@@ -24,7 +24,16 @@
          <div *ngIf="cover?.invalid && (cover?.touched)" class="error">
              <div *ngIf="cover?.errors?.['required']">Cover image is required</div>
          </div>
-       </div>                          
+       </div>    
+       <div class="mb-3">
+        <label for="discount" class="form-label">Discount</label>
+        <select name="discount" formControlName="discount" id="discount" class="form-select" >
+            <option *ngFor="let discount of discounts; index as i" value="{{ discount.id }}">{{ discount.name + '-' + discount.percent + ' %'}}</option>
+        </select>
+        <div *ngIf="discount?.invalid && (discount?.touched)" class="error">
+            <div *ngIf="discount?.errors?.['required']">Required</div>
+        </div>
+      </div>                         
      </div>
      <div class="row">
         <div class="col-md">

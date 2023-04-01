@@ -20,7 +20,7 @@ export class MainContentComponent implements OnInit {
   alphabetSortType = 'default';
 
   getAllBooks() {
-    this.booksService.getBooks()
+    this.booksService.getAll()
       .subscribe({
           next: books => {
             //console.log(books);
@@ -46,7 +46,7 @@ export class MainContentComponent implements OnInit {
   }
 
   getFilteredlBooks() {
-    this.booksService.getBooks()
+    this.booksService.getAll()
       .subscribe({
           next: books => {
             this.books = this.sortByPrice(this.priceSortType, books);
@@ -61,7 +61,7 @@ export class MainContentComponent implements OnInit {
     }
 
     getAlphabeticallySortedBooks() {
-      this.booksService.getBooks()
+      this.booksService.getAll()
       .subscribe({
           next: books => {
            // this.books = this.sortByPrice(this.priceSortType, books);

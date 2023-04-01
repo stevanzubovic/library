@@ -31,7 +31,7 @@ import { BookFormComponent } from './components/book-form/book-form.component';
 
   ],
   exports: [
-    HeaderComponent, FooterComponent, BooksGalleryComponent, ModalComponent
+    HeaderComponent, FooterComponent, BooksGalleryComponent, ModalComponent, BookFormComponent
   ]
 })
 export class SharedModule { }

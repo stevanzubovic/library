@@ -15,8 +15,9 @@ export class AdminComponent implements OnInit {
   constructor(private booksService: BooksService, private discountService: DiscountService) { }
 
   books: IBook[] = [];
-  displayModal = true;
+  display = "none";
   block = 'none';
+  editBookId: number = 0;
 
   getAllBooks() {
     this.booksService.getAll()
@@ -47,6 +48,11 @@ export class AdminComponent implements OnInit {
       })
   }
 
+  updateBook(id: number) {
+    this.display = 'block';
+    this.editBookId = id;
+  }
+
   calculateDiscountedPrice(basePrice: number, discountPercent: number): string {
     let discountedPrice;
     if(discountPercent) {
@@ -57,13 +63,21 @@ export class AdminComponent implements OnInit {
     }
   }
 
+  // getBook(id: number) {
+  //   this.booksService.get(id)
+  //   .subscribe({
+  //     next: book => {
+  //       this.book = book
+  //     }
+  //   })
+  // }
 
 openModal() {
-    this.block = 'block';
+    this.display = 'block';
     console.log(this.block)
   }
   onCloseHandled() {
-    this.block = 'none';
+    this.display = 'none';
   }
 
   ngOnInit(): void {

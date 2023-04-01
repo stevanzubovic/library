@@ -30,7 +30,7 @@ export class BooksGalleryComponent implements OnInit {
       discountedPrice = basePrice - (basePrice / 100) * discountPercent;
       return discountedPrice.toFixed(2);
     } else {
-      return basePrice.toFixed(2);
+      return basePrice.toString();
     }
   }
 
