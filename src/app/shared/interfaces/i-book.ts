@@ -12,5 +12,8 @@ export interface IBook {
     discountPercent: number
     discountId: number
     author: string
+    imageUrl:string
+    imageAlt:string
+    discountName:string
    
 }

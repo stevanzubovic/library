@@ -1,0 +1,57 @@
+<form action="" class="row g-4" [formGroup]="bookForm" (ngSubmit)="submitbook()">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="title">Title</label>
+            <input type="text" name="title" formControlName="title" id="title" class="form-control" required>
+            <div *ngIf="title?.invalid && (title?.dirty || title?.touched)" class="error">
+                <div *ngIf="title?.errors?.['required']">Title is required</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+         <label for="author">Author</label>
+         <input type="text" name="author" formControlName="author" id="author" class="form-control" required>
+         <div *ngIf="author?.invalid && (author?.dirty || author?.touched)" class="error">
+             <div *ngIf="author?.errors?.['required']">Author is required</div>
+         </div>
+     </div>
+    </div>
+    <div class="row">
+     <div class="mb-3">
+         <label for="cover" class="form-label">Cover image</label>
+         <select name="cover" formControlName="cover" id="cover" class="form-select" >
+             <option *ngFor="let cover of covers; index as i" value="{{ cover.id }}">{{ cover.url }}</option>
+         </select>
+         <div *ngIf="cover?.invalid && (cover?.touched)" class="error">
+             <div *ngIf="cover?.errors?.['required']">Cover image is required</div>
+         </div>
+       </div>                          
+     </div>
+     <div class="row">
+        <div class="col-md">
+            <label for="price">Price</label>
+            <input type="number" name="price" formControlName="price" id="price" class="form-control" required>
+            <div *ngIf="price?.invalid && (price?.dirty || price?.touched)" class="error">
+                <div *ngIf="author?.errors?.['required']">Price is required</div>
+                <div *ngIf="author?.errors?.['invalid']">Price cant be lower than 0</div>
+            </div>
+        </div>
+     </div>
+    <div class="row">
+     <div class="col">
+         <label for="description">Description</label>
+         <textarea name="description" id="description" cols="30" rows="8" class="form-control" formControlName="description"></textarea>
+         <div class="error" *ngIf="description?.invalid && (description?.touched || description?.dirty)">Can't submit empty description</div>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-3 align-self-end">
+         <div class="form-check">
+             <label for="available">Available</label>
+             <input type="checkbox" formControlName="available" name="available" id="available" class="form-check-input" checked>
+         </div>
+     </div>
+    </div>
+    <div class="col">
+        <button class="btn btn-dark" type="submit" [disabled]="bookForm.invalid">Submit</button>
+    </div>
+</form>

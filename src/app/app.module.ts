@@ -12,6 +12,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './pages/cart/cart.component';
 import { AuthorComponent } from './pages/author/author.component';
+import { AdminComponent } from './pages/admin/admin.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { AuthorComponent } from './pages/author/author.component';
     MainContentComponent,
     ContactComponent,
     CartComponent,
-    AuthorComponent
+    AuthorComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,8 @@ import { AuthorComponent } from './pages/author/author.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
