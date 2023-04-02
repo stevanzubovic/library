@@ -61,16 +61,20 @@ export class BookFormComponent implements OnInit {
   }
 
     getBook(id: number) {
-    this.bookService.get(id)
-    .subscribe({
-      next: book => {
-       this.fillForm(book);
+      if(this.bookId) {
+        this.bookService.get(id)
+        .subscribe({
+          next: book => {
+           this.fillForm(book);
+          }
+        })
+      } else {
+        this.emptyForm()
       }
-    })
   }
 
   fillForm(book: any) {
-    console.log(book);
+
     this.bookForm.get('title')?.setValue(book.title);
     this.bookForm.get('author')?.setValue(book.author);
     this.bookForm.get('description')?.setValue(book.description);
@@ -79,15 +83,21 @@ export class BookFormComponent implements OnInit {
     this.bookForm.get('price')?.setValue(book.basePrice);
   }
 
+  emptyForm() {
+    this.bookForm.get('title')?.setValue('');
+    this.bookForm.get('author')?.setValue('');
+    this.bookForm.get('description')?.setValue('');
+    this.bookForm.get('cover')?.setValue('');
+    this.bookForm.get('discount')?.setValue('');
+    this.bookForm.get('price')?.setValue('');
+  }
+
   ngOnChanges(changes: SimpleChanges) {
     // Extract changes to the input property by its name 
     console.log(changes['bookId'].currentValue);
     let id = changes['bookId'].currentValue
     this.getBook(id);
-    //this.getBook(change['currentValue'])
-    // Whenever the data in the parent changes, this method gets triggered
-    // You can act on the changes here. You will have both the previous
-    // value and the  current value here.
+
 }
 
 
@@ -113,7 +123,7 @@ export class BookFormComponent implements OnInit {
       this.bookService.update(this.bookId, data) 
       .subscribe({
         next: response => {
-          //location.reload()
+          location.reload()
         }
       })
     }

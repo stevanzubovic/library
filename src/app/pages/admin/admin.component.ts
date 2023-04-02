@@ -63,18 +63,11 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  // getBook(id: number) {
-  //   this.booksService.get(id)
-  //   .subscribe({
-  //     next: book => {
-  //       this.book = book
-  //     }
-  //   })
-  // }
+
 
 openModal() {
     this.display = 'block';
-    console.log(this.block)
+    this.editBookId = 0;
   }
   onCloseHandled() {
     this.display = 'none';
